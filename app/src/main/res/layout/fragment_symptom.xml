@@ -1,0 +1,59 @@
+<!-- res/layout/fragment_symptoms.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".SymptomFragment">
+
+    <!-- Toolbar specific to this fragment -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_symptoms"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Symptoms"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:menu="@menu/symptoms_toolbar_menu" />
+
+    <!-- Log New Symptom Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_log_new_symptom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_symptoms"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/black"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="Log New Symptom"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp" />
+
+    <!-- "Recent Symptoms" Title -->
+    <TextView
+        android:id="@+id/tv_recent_symptoms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_log_new_symptom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Recent Symptoms"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- The list where symptoms will be displayed -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_symptoms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_recent_symptoms"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/list_item_symptom" />
+
+</RelativeLayout>

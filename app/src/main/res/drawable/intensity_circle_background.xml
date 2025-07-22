@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/intensity_circle_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Background color of the circle -->
+    <solid android:color="#E0E0E0" /> <!-- A light grey color -->
+
+    <!-- You can adjust the size in the layout, but you can also set it here if needed -->
+    <size
+        android:width="40dp"
+        android:height="40dp" />
+
+</shape>

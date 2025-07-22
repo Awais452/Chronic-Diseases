@@ -1,0 +1,153 @@
+<!-- res/layout/fragment_home.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- "Good Afternoon" Greeting -->
+        <TextView
+            android:id="@+id/tv_greeting1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Moorning"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/tv_username1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="awais@gmail.com"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_greeting1" />
+
+        <!-- Profile Initial Circle -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_profile1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="@color/profile_circle_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_greeting1"
+            app:layout_constraintBottom_toBottomOf="@id/tv_username1">
+
+            <TextView
+                android:id="@+id/tv_profile_initial1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Container for the two buttons -->
+        <LinearLayout
+            android:id="@+id/layout_buttons1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_username1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_log_symptom1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Log Symptom"
+                android:textColor="@color/text_primary"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_add_circle"
+                app:iconTint="@color/colorAccent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_medicine1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Add Medicine"
+                android:textColor="@color/text_primary"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_add_box"
+                app:iconTint="@color/colorAccent"/>
+        </LinearLayout>
+
+        <!-- "Health Alerts & Insights" Title -->
+        <TextView
+            android:id="@+id/tv_insights_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Alerts &amp; Insights"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_buttons1" />
+
+        <!-- Insight Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_insight1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/insight_card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_insights_title1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_insight_icon1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_lightbulb"
+                    app:tint="@color/colorAccent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_insight_text1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Keep logging your symptoms consistently to help us find more meaningful patterns in your health."
+                    android:textColor="@color/text_primary"
+                    android:lineSpacingExtra="4dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_insight_icon1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

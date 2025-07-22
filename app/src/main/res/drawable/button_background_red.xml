@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#DC3545"/> <!-- A red color for logout -->
+    <corners android:radius="8dp"/>
+</shape>

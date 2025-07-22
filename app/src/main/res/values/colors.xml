@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cgreen">#C878EADF</color>
+    <color name="blue">#C42A3E98</color>
+    <color name="lblue">#6F7FD6</color>
+    <color name="llblue">#3CA3F4</color>
+    <color name="lgrey">#E0E0E0</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- res/values/colors.xml -->
+
+        <!-- Primary App Colors -->
+        <color name="colorPrimary">#FFFFFF</color> <!-- White background -->
+        <color name="colorPrimaryDark">#E0E0E0</color> <!-- Status bar color -->
+        <color name="colorAccent">#008080</color> <!-- Teal for accents -->
+
+        <!-- Custom UI Colors from Screenshot -->
+        <color name="app_background">#F5F5F5</color> <!-- Light grey background -->
+        <color name="text_primary">#212121</color> <!-- Dark grey for main text -->
+        <color name="text_secondary">#757575</color> <!-- Lighter grey for sub-text -->
+        <color name="bottom_nav_icon_tint_selected">#006767</color> <!-- Darker teal for selected icon -->
+        <color name="bottom_nav_icon_tint_unselected">#757575</color> <!-- Grey for unselected icon -->
+        <color name="insight_card_background">#E0F2F1</color> <!-- Very light teal -->
+        <color name="profile_circle_background">#B2DFDB</color> <!-- Light teal for profile circle -->
+        <color name="fab_background">#006767</color> <!-- Dark teal for Floating Action Button -->
+
+</resources>
