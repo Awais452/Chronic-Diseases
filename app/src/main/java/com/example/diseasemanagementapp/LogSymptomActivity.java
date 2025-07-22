@@ -135,3 +135,4 @@ public class LogSymptomActivity extends AppCompatActivity {
         }
     }
 }
+ye me mesal  k tor per add kr
