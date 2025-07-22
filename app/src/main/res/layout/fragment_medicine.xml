@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/fragment_medicines.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MedicineFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- (Optional) Toolbar if you want a title specific to this fragment -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_medicines"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Medicines"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignParentTop="true"/>
+
+    <!-- The list where medicines will be displayed -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_medicines"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@id/toolbar_medicines"
+        android:layout_above="@+id/btn_add_medicine_container"
+        android:paddingTop="8dp"
+        tools:listitem="@layout/list_item_medicine" />
 
-</FrameLayout>
+    <!-- A container to hold the button and apply padding -->
+    <RelativeLayout
+        android:id="@+id/btn_add_medicine_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <!-- Add Medicine Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp"
+            android:text="+ Add Medicine"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/black"
+            app:cornerRadius="24dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
