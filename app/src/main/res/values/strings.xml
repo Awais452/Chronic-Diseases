@@ -3,12 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<!-- ... other strings ... -->
-<string-array name="frequency_options">
-    <item>Once a day</item>
-    <item>Twice a day</item>
-    <item>Three times a day</item>
-    <item>As needed</item>
-    <item>Every other day</item>
-</string-array>
+    <!-- ... other strings ... -->
+    <string-array name="frequency_options">
+        <item>Once a day</item>
+        <item>Twice a day</item>
+        <item>Three times a day</item>
+        <item>As needed</item>
+        <item>Every other day</item>
+    </string-array>
 </resources>

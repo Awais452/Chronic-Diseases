@@ -69,7 +69,7 @@ public class login extends AppCompatActivity {
                 if (enteredEmail.equals(ADMIN_EMAIL) && enteredPass.equals(ADMIN_PASSWORD)) {
                     // It's the admin! Navigate to the Admin Panel.
                     Toast.makeText(login.this, "Admin Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(login.this, AdminPanelActivity.class); // <-- Make sure you create this Activity
+                    Intent intent = new Intent(login.this, AdminChatListActivity.class); // <-- Make sure you create this Activity
                     startActivity(intent);
                     finish();
                     return; // IMPORTANT: Stop further execution to prevent Firebase login attempt

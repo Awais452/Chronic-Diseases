@@ -15,6 +15,18 @@
         android:theme="@style/Theme.DiseaseManagementApp"
         tools:targetApi="31">
         <activity
+            android:name=".UserChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_user_chat"
+            android:exported="false" />
+        <activity
+            android:name=".AdminChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminChatListActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddMedicineActivity"
             android:exported="false" />
         <activity

@@ -1,5 +1,6 @@
 package com.example.diseasemanagementapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -39,6 +42,14 @@ public class HomeFragment extends Fragment {
         // --- Find views by their IDs ---
         TextView tvUsername = view.findViewById(R.id.tv_username1);
         TextView tvProfileInitial = view.findViewById(R.id.tv_profile_initial1);
+        MaterialButton Sbtn= view.findViewById(R.id.btn_log_symptom1);
+        MaterialButton Mbtn= view.findViewById(R.id.btn_add_medicine1);
+        Sbtn.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), LogSymptomActivity.class));
+        });
+        Mbtn.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), AddMedicineActivity.class));
+        });
 
         // --- Connect to Firebase to get User Data ---
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
